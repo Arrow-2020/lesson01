@@ -15,19 +15,17 @@ public class lesson01 //1. Создать пустой проект в IntelliJ 
     }
 
     // 3 Написать метод вычисляющий выражение.
-    public static void maineThree(int a, int b, int c, int d) {
-        System.out.println(a * (b + (c / d)));
+    public static void maineThree(float a, float b, float c, float d) 
+    {
+        System.out.println a * (b + (c / d)); //были лишние скобки
     }
 
     // 4 Написать метод, принимающий на вход два числа, и проверяющий что их сумма лежит в пределах от 10 до 20.
-    public static boolean checkNumbers(int a, int b) {
+    public static boolean isSumNumbers(int a, int b) //is объявляется с булл
+    {
         int sum = a + b;
-        if (sum >= 10 && sum <= 20)
-        {
-            return true;
-        } else {
-            return false;
-        }
+        boolean res sum >= 10 && sum <= 20; //исправлен инт на бул. убраны скобки
+            return res;
     }
     //5 Написать метод, которому в качестве параметра передается целое число, метод должен напечатать в консоль
     // положительное ли число передали, или отрицательное; Замечание: ноль считаем положительным числом.
@@ -44,19 +42,8 @@ public class lesson01 //1. Создать пустой проект в IntelliJ 
 
     //6 Написать метод, которому в качестве параметра передается целое число,
     // метод должен вернуть true, если число отрицательное
-    static boolean positively(int a)
-    {
-        if (a < 0)
-        {
-            return true;
-        } else
-            {
-            return false;
-        }
-
-    }
-
-
+    static boolean positively(int a) {return a < 0;} // сокращен код
+    
 
     /* 7  Написать метод, которому в качестве параметра передается строка,
      обозначающая имя, метод должен вывести в консоль сообщение «Привет, указанное_имя!»;*/
